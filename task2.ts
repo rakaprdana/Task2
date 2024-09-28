@@ -4,27 +4,27 @@ const Umur: number = 20;
 const Status: boolean = true;
 console.log("Nama Pahlawan: " + Nama);
 console.log("Umur: " + Umur);
-console.log("Apakah pahlawan siap bertarung: " + Status);
-console.log("\n");
+console.log("Apakah pahlawan siap bertarung: " + Status + "\n");
 
 //Variabel penyimpan data berupa sumber daya player
+console.log("\nSumber Daya Player:");
 const Emas: number = 5000;
 const Makanan: number = 120;
 const Pasukkan: number = 200;
 console.log("Emas yang dimiliki: " + Emas);
 console.log("Jumlah makanan: " + Makanan);
 console.log("Prajurit yang dimiliki: " + Pasukkan);
-console.log("\n");
 
 //Emas dan pengalaman(EXP) yan diperoleh
+console.log("Emas dan Pengalaman (EXP):");
 const goldEarned = Emas + 1500;
 console.log("Gold yang diperoleh: " + goldEarned + " Gold");
 
 const expEarned: number = 75;
 console.log("EXP yang diperoleh: " + expEarned + " EXP");
-console.log("\n");
 
 // Fungsi untuk mengurangi kesehatan prajurit
+console.log("\nSistem Pengurangan Kesehatan: ");
 const kurangiKesehatan = (
   jumlahPrajurit: number,
   poinKehilangan: number = 5 //5 merupakan nilai default
@@ -49,7 +49,7 @@ akan dirender ulang untuk menjadi kesehatanBaru*/
 kurangiKesehatan(5);
 
 //Summary
-console.log("\n");
+console.log("\nSummary:");
 const summary = () => {
   const totalGold = goldEarned;
   const totalExp = expEarned;
