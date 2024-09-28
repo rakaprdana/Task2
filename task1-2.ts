@@ -1,26 +1,24 @@
 // 2. Method untuk penjumlahan, pengurangan, perkalian, dan pembagian
-
-function add(a: number, b: number): number {
-  return a + b;
-}
-
-function subtract(a: number, b: number): number {
-  return a - b;
-}
-
-function multiply(a: number, b: number): number {
-  return a * b;
-}
-
-function divide(a: number, b: number): number {
-  if (b === 0) {
-    throw new Error("0 tidak bisa dibagi");
+function calculate(a: number, b: number, operation: string): number {
+  switch (operation) {
+    case "add":
+      return a + b;
+    case "subtract":
+      return a - b;
+    case "multiply":
+      return a * b;
+    case "divide":
+      if (b === 0) {
+        throw new Error("0 tidak bisa dibagi");
+      }
+      return a / b;
+    default:
+      throw new Error("Operasi tidak valid");
   }
-  return a / b;
 }
 
 //Penggunaan
-console.log("Penjumlahan: ", add(10, 5));
-console.log("Pengurangan: ", subtract(10, 5));
-console.log("Perkalian: ", multiply(10, 5));
-console.log("Pembagian: ", divide(10, 2));
+console.log("Penjumlahan: " + calculate(10, 5, "add"));
+console.log("Pengurangan: " + calculate(10, 5, "subtract"));
+console.log("Perkalian: " + calculate(10, 5, "multiply"));
+console.log("Pembagian: " + calculate(10, 2, "divide"));
